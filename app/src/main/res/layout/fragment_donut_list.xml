@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    tools:context=".DonutListFragment">
+
+    <FrameLayout
+        android:id="@+id/fragmentlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/listmain1"
+                android:layout_width="350dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:text="Yummy Donut"
+                android:textColor="@color/redpink"
+                android:textSize="50dp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:columnCount="2"
+                android:rowCount="3"
+                android:alignmentMode="alignBounds"
+                app:layout_constraintTop_toBottomOf="@id/listmain1"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardlist1"
+                    android:layout_width="150dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="40dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_row="0"
+                    android:layout_column="0">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="147dp"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:id="@+id/fragmentlist1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layout_constraintTop_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/cardlistname1"
+                            android:layout_width="124dp"
+                            android:layout_height="25dp"
+                            android:gravity="start"
+                            android:text="Little chicken"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/cardlistimg1"
+                            app:layout_constraintStart_toStartOf="@+id/cardlistimg1"
+                            app:layout_constraintTop_toBottomOf="@+id/cardlistimg1" />
+
+                        <TextView
+                            android:id="@+id/cardlistprice1"
+                            android:layout_width="124dp"
+                            android:layout_height="25dp"
+                            android:gravity="start"
+                            android:text="R$ 9.99"
+                            android:textColor="@color/redpink"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/cardlistname1"
+                            app:layout_constraintStart_toStartOf="@+id/cardlistname1"
+                            app:layout_constraintTop_toBottomOf="@+id/cardlistname1" />
+
+                        <ImageButton
+                            android:id="@+id/cardlistimg1"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/donut1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardlist2"
+                    android:layout_width="150dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="30dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_row="0"
+                    android:layout_column="1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:id="@+id/fragmentlist2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layout_constraintTop_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/cardlistname2"
+                            android:layout_width="124dp"
+                            android:layout_height="22dp"
+                            android:gravity="start"
+                            android:text="Strawberry donut"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/cardlistimg2"
+                            app:layout_constraintStart_toStartOf="@+id/cardlistimg2"
+                            app:layout_constraintTop_toBottomOf="@+id/cardlistimg2" />
+
+                        <TextView
+                            android:id="@+id/cardlistprice2"
+                            android:layout_width="124dp"
+                            android:layout_height="25dp"
+                            android:gravity="start"
+                            android:text="R$ 9.99"
+                            android:textColor="@color/redpink"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/cardlistname2"
+                            app:layout_constraintStart_toStartOf="@+id/cardlistname2"
+                            app:layout_constraintTop_toBottomOf="@+id/cardlistname2" />
+
+                        <ImageButton
+                            android:id="@+id/cardlistimg2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/donut2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardlist3"
+                    android:layout_width="150dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_row="1"
+                    android:layout_column="0">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:id="@+id/fragmentlist3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layout_constraintTop_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/cardlistname3"
+                            android:layout_width="124dp"
+                            android:layout_height="22dp"
+                            android:gravity="start"
+                            android:text="Almond donut"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/cardlistimg3"
+                            app:layout_constraintStart_toStartOf="@+id/cardlistimg3"
+                            app:layout_constraintTop_toBottomOf="@+id/cardlistimg3" />
+
+                        <TextView
+                            android:id="@+id/cardlistprice3"
+                            android:layout_width="124dp"
+                            android:layout_height="25dp"
+                            android:gravity="start"
+                            android:text="R$ 9.99"
+                            android:textColor="@color/redpink"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/cardlistname3"
+                            app:layout_constraintStart_toStartOf="@+id/cardlistname3"
+                            app:layout_constraintTop_toBottomOf="@+id/cardlistname3" />
+
+                        <ImageButton
+                            android:id="@+id/cardlistimg3"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/donut3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardlist4"
+                    android:layout_width="150dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="30dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_row="1"
+                    android:layout_column="1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:id="@+id/fragmentlist4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layout_constraintTop_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/cardlistname4"
+                            android:layout_width="124dp"
+                            android:layout_height="22dp"
+                            android:gravity="start"
+                            android:text="Chocolate donut"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/cardlistimg4"
+                            app:layout_constraintStart_toStartOf="@+id/cardlistimg4"
+                            app:layout_constraintTop_toBottomOf="@+id/cardlistimg4" />
+
+                        <TextView
+                            android:id="@+id/cardlistprice4"
+                            android:layout_width="124dp"
+                            android:layout_height="25dp"
+                            android:gravity="start"
+                            android:text="R$ 9.99"
+                            android:textColor="@color/redpink"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/cardlistname4"
+                            app:layout_constraintStart_toStartOf="@+id/cardlistname4"
+                            app:layout_constraintTop_toBottomOf="@+id/cardlistname4" />
+
+                        <ImageButton
+                            android:id="@+id/cardlistimg4"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/donut4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardlist5"
+                    android:layout_width="150dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_row="2"
+                    android:layout_column="0">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:id="@+id/fragmentlist5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layout_constraintTop_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/cardlistname5"
+                            android:layout_width="124dp"
+                            android:layout_height="22dp"
+                            android:gravity="start"
+                            android:text="Strawberry donut"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/cardlistimg5"
+                            app:layout_constraintStart_toStartOf="@+id/cardlistimg5"
+                            app:layout_constraintTop_toBottomOf="@+id/cardlistimg5" />
+
+                        <TextView
+                            android:id="@+id/cardlistprice5"
+                            android:layout_width="124dp"
+                            android:layout_height="25dp"
+                            android:gravity="start"
+                            android:text="R$ 9.99"
+                            android:textColor="@color/redpink"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/cardlistname5"
+                            app:layout_constraintStart_toStartOf="@+id/cardlistname5"
+                            app:layout_constraintTop_toBottomOf="@+id/cardlistname5" />
+
+                        <ImageButton
+                            android:id="@+id/cardlistimg5"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/donut5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardlist6"
+                    android:layout_width="150dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="30dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_row="2"
+                    android:layout_column="1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:id="@+id/fragmentlist6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layout_constraintTop_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/cardlistname6"
+                            android:layout_width="124dp"
+                            android:layout_height="22dp"
+                            android:gravity="start"
+                            android:text="Strawberry donut"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/cardlistimg6"
+                            app:layout_constraintStart_toStartOf="@+id/cardlistimg6"
+                            app:layout_constraintTop_toBottomOf="@+id/cardlistimg6" />
+
+                        <TextView
+                            android:id="@+id/cardlistprice6"
+                            android:layout_width="124dp"
+                            android:layout_height="25dp"
+                            android:gravity="start"
+                            android:text="R$ 9.99"
+                            android:textColor="@color/redpink"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/cardlistname6"
+                            app:layout_constraintStart_toStartOf="@+id/cardlistname6"
+                            app:layout_constraintTop_toBottomOf="@+id/cardlistname6" />
+
+                        <ImageButton
+                            android:id="@+id/cardlistimg6"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/donut6"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

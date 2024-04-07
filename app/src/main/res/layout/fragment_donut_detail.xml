@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".DonutDetailFragment">
+
+    <ImageButton
+        android:id="@+id/detailbtn1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/detailimg1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/donut1"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="260dp"
+        app:cardCornerRadius="30dp"
+        app:cardBackgroundColor="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/detailname1"
+                android:layout_width="212dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="20dp"
+                android:text="Little chicken"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/detailprice1"
+                android:layout_width="140dp"
+                android:layout_height="52dp"
+                android:text="R$ 9.99"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:gravity="end"
+                app:layout_constraintBottom_toBottomOf="@+id/detailname1"
+                app:layout_constraintStart_toEndOf="@+id/detailname1"
+                app:layout_constraintTop_toTopOf="@+id/detailname1" />
+
+            <TextView
+                android:id="@+id/detailinfo1"
+                android:layout_width="327dp"
+                android:layout_height="52dp"
+                android:text="Nutritional information"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/brown"
+                app:layout_constraintStart_toStartOf="@+id/detailname1"
+                app:layout_constraintTop_toBottomOf="@+id/detailname1" />
+
+            <FrameLayout
+                android:id="@+id/fragmentdetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="1dp">
+            </FrameLayout>
+
+            <ListView
+                android:id="@+id/detaillistview"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/detailinfo1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            
+            <TextView
+                android:id="@+id/detailingredient"
+                android:layout_width="225dp"
+                android:layout_height="52dp"
+                app:layout_constraintTop_toBottomOf="@id/detaillistview"
+                app:layout_constraintStart_toStartOf="@id/detailinfo1"
+                android:text="Ingredient"
+                android:layout_marginTop="10dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/brown" />
+            
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/detailcardview2"
+                android:layout_width="370dp"
+                android:layout_height="100dp"
+                app:layout_constraintTop_toBottomOf="@id/detailingredient"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/detailbtn2"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@id/detailcardview2"
+                app:layout_constraintStart_toStartOf="@id/detailcardview2"
+                android:layout_marginTop="10dp"
+                android:text="Add to cart"
+                android:textColor="@color/white"
+                android:background="@drawable/btnbackground"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toTopOf="@id/detailbtn2"
+                app:layout_constraintBottom_toBottomOf="@id/detailbtn2"
+                app:layout_constraintEnd_toEndOf="@id/detailcardview2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/cardviewimg1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@drawable/heart_fill" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
